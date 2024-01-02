@@ -102,15 +102,29 @@ body {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 767px) {
+  .footer__main {
+    display: block;
+    justify-content: center;
+  }
+}
+.footer__addcontent {
+  padding-left: 1rem;
+}
 .footer__header {
   display: flex;
-  justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .footer__header {
+    display: block;
+    justify-content: center;
+  }
 }
 .footer__heading {
   font-family: "avenir-bold", sans-serif;
   font-size: 24px;
   color: white;
-  padding: 1rem 0 1.5rem 0;
+  padding: 1rem 1rem 0rem 0rem;
 }
 .footer__main-link {
   padding: 2rem 1rem 3rem 5rem;
