@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'avenir-bold';
+    src: url('../Assets/Font/AvenirNextLTPro-Bold.otf') ;
+}
+@font-face {
+    font-family: 'avenir-demi';
+    src: url('../Assets/Font/AvenirNextLTPro-Demi.otf');
+}
+@font-face {
+    font-family: 'avenir-regular';
+    src: url('../Assets/Font/AvenirNextLTPro-Regular.otf') ;
+}
+$Bandsite-black : #323232;
+$Bandsite-Darkblack : #000000;
+$Silver : #afafaf;
+$White : #FFFFFF;
+$Mercury : #E1E1E1;
+$Alabaster : #FAFAFA;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main__heading{
+    position: relative;
+    background-image: url('../Assets/Images/hero-bio.jpg');
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    opacity: 0.8;
+    &-content{
+        font-family: 'avenir-demi';
+        font-size: 2rem;
+        color: $White;
+        text-align: center;
+        position: absolute;
+        top: 35%;
+        left:10%;
+    }
+}
+
+@import "./partials/navmenu";
+@import "./partials/footer";
+@import "./partials/gallary";
+@import "./partials/maincontent"

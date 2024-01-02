@@ -1,0 +1,22 @@
+.gallary{
+    background-color: $Alabaster;
+    padding: 0rem 1rem 1rem 2rem;
+    &__main-box{
+        margin: 1.5rem;
+        padding: auto;
+        padding: 2rem;
+    }
+    &__heading{
+        font-family: 'avenir-demi';
+        // padding: 0rem 0rem 0.5rem 1rem;
+    }
+    &__images{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__box{
+        height: 30vh;
+        width: 25vw;
+        padding: 0.5rem;
+    }
+}

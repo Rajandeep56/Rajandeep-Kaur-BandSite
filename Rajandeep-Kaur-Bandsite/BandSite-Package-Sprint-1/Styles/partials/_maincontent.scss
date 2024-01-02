@@ -1,0 +1,52 @@
+.main{
+    padding: 0rem 1rem 1rem 2rem;
+    &__content{
+        padding: 0rem 10rem 0rem 10rem;
+
+    }
+    &__container-about{
+        margin: 1.5rem;
+        padding: 0rem 0rem 0rem 2rem;
+        font-family: 'avenir-demi';
+    }
+    &__container-picture{
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    &__bandimage{
+        width: 100vw;
+        height: 100vh;
+        display: block;
+    }
+    &__qoute{
+        font-family: 'avenir-bold';
+        &-line{
+            font-family: 'avenir-demi';
+        font-size: 1.2rem;
+        }
+        &-autohr{
+            font-family: 'avenir-demi';
+            font-size: 09rem;
+        }
+    }
+    &__paragraphs-heading{
+        font-family: 'avenir-demi';
+        font-size: 1.2rem;
+    }
+
+    &__paragraph{
+        display: flex;
+        &-first,&-second{
+            font-family:'avenir-regular' ;
+            line-height: 1.5rem;
+            margin: 0rem;
+            font-size: 0.85rem;
+            padding-right: 0.8rem;
+        }
+    }
+    
+}

@@ -1,0 +1,35 @@
+.nav{
+    background-color: $Bandsite-black;
+    &__container{
+        display: flex;
+        box-sizing: border-box;
+        padding: 1rem 0rem 0.5rem 10rem;
+        align-items: center;
+    }
+    &__menu{
+        display: flex;
+        list-style-type: none;
+        color: $White;
+        font-family: 'avenir-regular';
+        text-decoration: none;
+        padding: 0rem 0rem 0rem 4rem;
+
+        &-border{
+            padding: 0rem;
+            padding-right: 1rem;
+        }
+
+        &-link1,&-link2{
+        
+            text-decoration: none;
+            color: $White;
+            &:hover{
+                border-bottom: 2px solid $White;
+            }
+            &-active{
+                text-decoration: underline;
+            }
+        }
+    }
+    
+}
