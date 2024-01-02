@@ -22,15 +22,22 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 .main__heading{
     position: relative;
     background-image: url('../Assets/Images/hero-bio.jpg');
-    width: 100vw;
-    background-size: cover;
+    width: 100%;
+    background-size: 100%;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 75vh;
     opacity: 0.8;
+    @media(min-width: 324px) and (max-width:767px){
+        background-size: 100%;
+        background-position: center;
+        height: 45vh;
+        width: 100%;
+    }
     &-content{
         font-family: 'avenir-demi';
         font-size: 2rem;

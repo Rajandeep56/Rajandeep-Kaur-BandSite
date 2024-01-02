@@ -1,8 +1,16 @@
 .main{
     padding: 0rem 1rem 1rem 2rem;
+    @media(min-width: 768px) and (max-width:1200px){
+        padding: 0rem 2rem;
+    }
     &__content{
         padding: 0rem 10rem 0rem 10rem;
-
+        @media(min-width: 768px) and (max-width:1200px){
+            padding: 0rem 5rem;
+        }
+        @media (min-width:324px) and (max-width: 767px)  { 
+                        padding: 0; 
+        }
     }
     &__container-about{
         margin: 1.5rem;
@@ -16,14 +24,32 @@
         justify-content: center;
         align-items: center;
         box-sizing: border-box;
+        @media(min-width: 768px) and (max-width:1279px){
+            position: relative;
+            height: 100%;
+        }
+        @media(min-width: 324px) and (max-width:767px){
+            position: relative;
+            height: 100%;
+        }
     }
     &__bandimage{
         width: 100vw;
         height: 100vh;
         display: block;
+        @media(min-width: 768px) and (max-width:1279px){
+            height: 75vh;
+        }
+        @media(min-width: 324px) and (max-width:767px){
+            height: 70%;
+            padding: 0;
+            margin: 0;
+            object-fit:cover ;
+        }
     }
     &__qoute{
         font-family: 'avenir-bold';
+        
         &-line{
             font-family: 'avenir-demi';
         font-size: 1.2rem;
@@ -40,12 +66,22 @@
 
     &__paragraph{
         display: flex;
+        @media (min-width: 320px) and (max-width: 767px)  { 
+            width: 100%;
+             height: auto;
+             display: block; 
+         }
         &-first,&-second{
             font-family:'avenir-regular' ;
             line-height: 1.5rem;
             margin: 0rem;
             font-size: 0.85rem;
-            padding-right: 0.8rem;
+            @media (min-width: 324px) and (max-width: 767px)  { 
+                width: 100%;
+                 height: auto;
+                 display: block; 
+                 padding:0.4rem;
+             }
         }
     }
     

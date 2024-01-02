@@ -1,15 +1,17 @@
 .footer{
     background-color: $Bandsite-black;
     padding: 2rem 4rem;
-
+   
     &__main{
         display: flex;
         justify-content: space-between;
+        
 
    }
   &__header{
     display: flex;
     justify-content: center;
+  
   }
     &__heading{
         font-family: 'avenir-bold', sans-serif;
@@ -25,9 +27,17 @@
     &__address{
         font-family: 'avenir-regular',sans-serif;
         font-size: small;
-        display: flex;
-        justify-content: left;
+       display: flex;
+       justify-content: left;
         color: white;
+        @media screen and (max-width: 767px)  { 
+            
+            display: block;
+            justify-content: center;
+        
+        
+        }
+       
     }
     &__address-first{
         padding: 0 0.5rem;

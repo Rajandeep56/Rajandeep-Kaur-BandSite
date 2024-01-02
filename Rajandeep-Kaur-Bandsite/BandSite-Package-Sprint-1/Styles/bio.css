@@ -20,11 +20,19 @@ body {
 .main__heading {
   position: relative;
   background-image: url("../Assets/Images/hero-bio.jpg");
-  width: 100vw;
-  background-size: cover;
+  width: 100%;
+  background-size: 100%;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 75vh;
   opacity: 0.8;
+}
+@media (min-width: 324px) and (max-width: 767px) {
+  .main__heading {
+    background-size: 100%;
+    background-position: center;
+    height: 45vh;
+    width: 100%;
+  }
 }
 .main__heading-content {
   font-family: "avenir-demi";
@@ -45,6 +53,18 @@ body {
   padding: 1rem 0rem 0.5rem 10rem;
   align-items: center;
 }
+@media (min-width: 324px) and (max-width: 767px) {
+  .nav__container {
+    display: block;
+    justify-content: center;
+    padding: 2rem 0rem 0.3rem 0rem;
+  }
+}
+.nav__logo-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .nav__menu {
   display: flex;
   list-style-type: none;
@@ -52,6 +72,12 @@ body {
   font-family: "avenir-regular";
   text-decoration: none;
   padding: 0rem 0rem 0rem 4rem;
+}
+@media (min-width: 324px) and (max-width: 767px) {
+  .nav__menu {
+    padding: 0rem 0rem 0rem 0rem;
+    justify-content: space-around;
+  }
 }
 .nav__menu-border {
   padding: 0rem;
@@ -97,6 +123,12 @@ body {
   justify-content: left;
   color: white;
 }
+@media screen and (max-width: 767px) {
+  .footer__address {
+    display: block;
+    justify-content: center;
+  }
+}
 .footer__address-first {
   padding: 0 0.5rem;
 }
@@ -136,6 +168,17 @@ body {
   padding: auto;
   padding: 2rem;
 }
+@media (min-width: 324px) and (max-width: 767px) {
+  .gallary__main-box {
+    display: block;
+    padding: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .gallary__main-box {
+    padding: 0rem 0rem 0rem 0.3rem;
+  }
+}
 .gallary__heading {
   font-family: "avenir-demi";
 }
@@ -143,17 +186,55 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+@media (min-width: 324px) and (max-width: 767px) {
+  .gallary__images {
+    display: block;
+    padding: 0;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
+}
 .gallary__box {
   height: 30vh;
   width: 25vw;
   padding: 0.5rem;
 }
+@media (min-width: 324px) and (max-width: 767px) {
+  .gallary__box {
+    width: 100%;
+    height: auto;
+    padding: 0.1rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .gallary__box {
+    padding: 0rem 0rem 0rem 0.3rem;
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
+}
 
 .main {
   padding: 0rem 1rem 1rem 2rem;
 }
+@media (min-width: 768px) and (max-width: 1200px) {
+  .main {
+    padding: 0rem 2rem;
+  }
+}
 .main__content {
   padding: 0rem 10rem 0rem 10rem;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .main__content {
+    padding: 0rem 5rem;
+  }
+}
+@media (min-width: 324px) and (max-width: 767px) {
+  .main__content {
+    padding: 0;
+  }
 }
 .main__container-about {
   margin: 1.5rem;
@@ -168,10 +249,36 @@ body {
   align-items: center;
   box-sizing: border-box;
 }
+@media (min-width: 768px) and (max-width: 1279px) {
+  .main__container-picture {
+    position: relative;
+    height: 100%;
+  }
+}
+@media (min-width: 324px) and (max-width: 767px) {
+  .main__container-picture {
+    position: relative;
+    height: 100%;
+  }
+}
 .main__bandimage {
   width: 100vw;
   height: 100vh;
   display: block;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .main__bandimage {
+    height: 75vh;
+  }
+}
+@media (min-width: 324px) and (max-width: 767px) {
+  .main__bandimage {
+    height: 70%;
+    padding: 0;
+    margin: 0;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 .main__qoute {
   font-family: "avenir-bold";
@@ -191,10 +298,24 @@ body {
 .main__paragraph {
   display: flex;
 }
+@media (min-width: 320px) and (max-width: 767px) {
+  .main__paragraph {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
 .main__paragraph-first, .main__paragraph-second {
   font-family: "avenir-regular";
   line-height: 1.5rem;
   margin: 0rem;
   font-size: 0.85rem;
-  padding-right: 0.8rem;
+}
+@media (min-width: 324px) and (max-width: 767px) {
+  .main__paragraph-first, .main__paragraph-second {
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 0.4rem;
+  }
 }/*# sourceMappingURL=bio.css.map */
