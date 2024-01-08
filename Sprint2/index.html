@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./Styles/bio.css">
-    <title>Bandsite</title>
+    <title>Bandsite - 2</title>
 </head>
 <body>
     <nav class="nav">
@@ -11,7 +11,7 @@
             <a class="nav__logo-img" href="./index.html"><img class="" src="./Assets/Logo/Logo-bandsite.svg" alt="Bandsite Logo"></a>
                 <ul class="nav__menu">
                     <li class="nav__menu-border"><a  class="nav__menu-link1" href="./index.html">Biography</a></li>
-                    <li class="nav__menu-border"><a  class="nav__menu-link2" href="#">Shows</a></li>
+                    <li class="nav__menu-border"><a  class="nav__menu-link2" href="./Pages/shows.html">Shows</a></li>
                 </ul>
         </div>
     </nav>
@@ -67,7 +67,22 @@
                 </div>
             </div>
         </section>
-    
+        <section class="comment">
+            <h1 class="comment__title">Join the Conversation</h1>
+            <div class="comment__name-main">  
+                    <img class="comment__image" src="./Assets/images/Mohan-muruge.jpg">
+                    <form class="comment__input-box">
+                        <h5 class="comment__input-box--text">NAME</h5>
+                        <textarea class="comment__textbox comment__textbox--one"  name="name" rows="10" cols="50"
+                        placeholder="Enter your name"></textarea>
+                        <h5 class="comment__input-box--text">COMMENT</h5>
+                        <textarea class="comment__textbox comment__text-main--two" name="comment" rows="10" cols="50"
+                        placeholder="Add a new comment"></textarea>
+                        <button class="comment__button">COMMENT</button>
+                    </form>
+                </div>  
+                <div class="comment__previous-comments"></div>
+        </section>
     <footer class="footer">
         <div class="footer__main">
             <div class="footer__addcontent">
@@ -78,8 +93,6 @@
                 <a href="https://facebook.com/"><img  src="./Assets/icons/svg/Icon-facebook.svg" ></a>
                 <a href="https://twitter.com/"><img  src="./Assets/icons/svg/Icon-twitter.svg" ></a>
             </div>
-            
-            <!-- <img class="footer__heading" src="./Assets/Logo/Logo-bandsite.svg" > -->
         </div>
         
         <div class="footer__address">
@@ -126,6 +139,7 @@
          </div>
     </div>
     
-    </footer>    
+    </footer>  
+    <script src="./Scripts/index-page.js"></script>  
 </body>
 </html>
