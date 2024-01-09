@@ -373,7 +373,7 @@ body {
   flex-direction: column;
 }
 .comment__input-box--text {
-  font-family: avenir-demi;
+  font-family: "avenir-demi";
   color: #afafaf;
   line-height: 1.25rem;
   margin: 0 0 0.25rem 0;
@@ -443,11 +443,12 @@ body {
   color: #afafaf;
 }
 .comment__heading--name {
-  font-family: avenir-demi;
+  font-family: "avenir-demi";
 }
 .comment__heading--main {
   padding-top: 1rem;
-  font-family: avenir-regular;
+  font-family: "avenir-regular";
+  line-height: 1.25rem;
 }
 .comment__avatar-box-img {
   width: 3rem;
