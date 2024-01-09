@@ -31,11 +31,15 @@ let comments = [
       avatar.classList.add("comment__avatar-box-img");
       avatar.src="./Assets/Images/Mohan-muruge.jpg"
       mainCommentsBox.appendChild(avatar);
-  
+
+      let content2 = document.createElement("div");
+      content2.classList.add("comment__heading--main");
+      mainCommentsBox.appendChild(content2);
+
       let content = document.createElement("div");
       content.classList.add("comment__heading");
-      mainCommentsBox.appendChild(content);
-  
+      content2.appendChild(content);
+
       let name = document.createElement("div");
       name.classList.add("comment__heading--name");
       name.innerText = array[i]["name"];
@@ -48,7 +52,7 @@ let comments = [
   
       let textbox = document.createElement("div");
       textbox.classList.add("comment__text-box-main");
-      mainCommentsBox.appendChild(textbox);
+      content2.appendChild(textbox);
   
       let commentDescription = document.createElement("p");
       commentDescription.classList.add("comment__text-box-main--comment");
@@ -57,4 +61,3 @@ let comments = [
     }
   }
   Comments(comments);
- 
