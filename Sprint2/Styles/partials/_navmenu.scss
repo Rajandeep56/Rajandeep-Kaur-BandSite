@@ -3,7 +3,7 @@
     &__container{
         display: flex;
         box-sizing: border-box;
-        padding: 1rem 0rem 0.5rem 10rem;
+        padding: 1rem 0rem 0rem 10rem;
         align-items: center;
         @media(min-width: 324px) and (max-width:767px){
             display: block;
@@ -23,6 +23,7 @@
         font-family: 'avenir-regular';
         text-decoration: none;
         padding: 0rem 0rem 0rem 4rem;
+        margin-block-end: 0;
         @media(min-width: 324px) and (max-width:767px){
             padding: 0rem 0rem 0rem 0rem;
             justify-content: space-around;
@@ -30,18 +31,18 @@
         &-border{
             padding: 0rem;
             padding-right: 1rem;
+            &--active{
+                // text-decoration: underline;
+                 border-bottom: 2px solid $White;
+                 padding-bottom: 2rem;
+             }
         }
 
-        &-link1,&-link2{
+        &-link1{
            
             text-decoration: none;
             color: $White;
-            &:hover{
-                border-bottom: 2px solid $White;
-            }
-            &-active{
-                text-decoration: underline;
-            }
+           
         }
     }
     
