@@ -62,7 +62,7 @@ body {
 .nav__container {
   display: flex;
   box-sizing: border-box;
-  padding: 1rem 0rem 0.5rem 10rem;
+  padding: 1rem 0rem 0rem 10rem;
   align-items: center;
 }
 @media (min-width: 324px) and (max-width: 767px) {
@@ -84,6 +84,7 @@ body {
   font-family: "avenir-regular";
   text-decoration: none;
   padding: 0rem 0rem 0rem 4rem;
+  margin-block-end: 0;
 }
 @media (min-width: 324px) and (max-width: 767px) {
   .nav__menu {
@@ -95,15 +96,13 @@ body {
   padding: 0rem;
   padding-right: 1rem;
 }
-.nav__menu-link1, .nav__menu-link2 {
+.nav__menu-border--active {
+  border-bottom: 2px solid #FFFFFF;
+  padding-bottom: 2rem;
+}
+.nav__menu-link1 {
   text-decoration: none;
   color: #FFFFFF;
-}
-.nav__menu-link1:hover, .nav__menu-link2:hover {
-  border-bottom: 2px solid #FFFFFF;
-}
-.nav__menu-link1-active, .nav__menu-link2-active {
-  text-decoration: underline;
 }
 
 .footer {
