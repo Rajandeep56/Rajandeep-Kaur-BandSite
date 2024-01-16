@@ -1,5 +1,5 @@
 .shows{
-    background-color: $Alabaster;
+    background-color: $White;
     display: flex;
     padding: 1.5rem 0 1.5rem 0;
     &__title{
@@ -7,7 +7,7 @@
     }
     &__title-box{
         padding: 0 5rem;
-        font-family: 'avenir-bold';
+        font-family: 'avenir-demi';
         font-size: 2.25rem;
         color: $Bandsite-black;
        
@@ -32,10 +32,17 @@
         align-items: center;
         padding: 0 0 0 1rem;
         font-size: 0.75rem;
-        border-bottom: 2px solid $Silver;
+        border-bottom: 2px solid $Alabaster;
         &--location,&--venue,&--date{
             padding: 0 6rem 0 0rem ;
         }
+            &:hover {
+                background-color:$Silver;
+            }
+            &.show--selected{
+                background-color: $Bandsite-black;
+            }
+     
         &--button{
             @include buttons
         }
