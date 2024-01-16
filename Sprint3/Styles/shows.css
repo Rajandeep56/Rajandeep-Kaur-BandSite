@@ -62,7 +62,7 @@ body {
 .nav__container {
   display: flex;
   box-sizing: border-box;
-  padding: 1rem 0rem 0.5rem 10rem;
+  padding: 0rem 0rem 0rem 10rem;
   align-items: center;
 }
 @media (min-width: 324px) and (max-width: 767px) {
@@ -79,11 +79,13 @@ body {
 }
 .nav__menu {
   display: flex;
+  align-items: center;
   list-style-type: none;
   color: #FFFFFF;
   font-family: "avenir-regular";
   text-decoration: none;
   padding: 0rem 0rem 0rem 4rem;
+  margin-block-end: 0;
 }
 @media (min-width: 324px) and (max-width: 767px) {
   .nav__menu {
@@ -92,18 +94,21 @@ body {
   }
 }
 .nav__menu-border {
-  padding: 0rem;
-  padding-right: 1rem;
+  padding: 1rem;
 }
-.nav__menu-link1, .nav__menu-link2 {
+.nav__menu-border--active {
+  border-bottom: 2px solid #FFFFFF;
+  padding: 1rem 1rem 1rem 0;
+  box-sizing: border-box;
+  color: #FFFFFF;
+}
+.nav__menu-link1 {
   text-decoration: none;
   color: #FFFFFF;
 }
-.nav__menu-link1:hover, .nav__menu-link2:hover {
-  border-bottom: 2px solid #FFFFFF;
-}
-.nav__menu-link1-active, .nav__menu-link2-active {
-  text-decoration: underline;
+.nav__menu-link2 {
+  text-decoration: none;
+  color: #E1E1E1;
 }
 
 .footer {
@@ -207,6 +212,9 @@ body {
 }
 .gallary__heading {
   font-family: "avenir-demi";
+  color: #323232;
+  font-size: 2.25rem;
+  font-weight: 700;
 }
 .gallary__images {
   display: flex;
@@ -266,6 +274,9 @@ body {
   margin: 1.5rem;
   padding: 0rem 0rem 0rem 2rem;
   font-family: "avenir-demi";
+  color: #323232;
+  font-size: 2.25rem;
+  font-weight: 700;
 }
 .main__container-picture {
   height: 100vh;

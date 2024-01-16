@@ -18,7 +18,9 @@
     }
     &__heading{
         font-family: 'avenir-demi';
-        // padding: 0rem 0rem 0.5rem 1rem;
+        color: $Bandsite-black;
+        font-size: 2.25rem;
+        font-weight: 700;
     }
     &__images{
         display: flex;
