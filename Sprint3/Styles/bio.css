@@ -350,7 +350,7 @@ body {
   margin: 0 11.25rem 0 11.25rem;
 }
 .comment__title {
-  font-family: avenir-bold;
+  font-family: "avenir-bold";
   font-size: 2.125rem;
   font-weight: 700;
   margin: 3rem 0 3rem;
@@ -380,7 +380,7 @@ body {
 .comment__textbox {
   padding: 1rem;
   border-radius: 0.25rem;
-  font-family: avenir-regular;
+  font-family: "avenir-regular";
   border: 1px solid #E1E1E1;
   background-color: #FAFAFA;
   border-color: #afafaf;
@@ -423,13 +423,12 @@ body {
   border-bottom: 1px solid #E1E1E1;
   border-top: 1px solid #E1E1E1;
   display: flex;
-  justify-content: center;
 }
 .comment__previous-comments {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 1.5rem 12rem;
+  padding: 0rem 10rem;
 }
 .comment__previous:hover {
   background-color: #E1E1E1;
@@ -448,6 +447,9 @@ body {
   padding-top: 1rem;
   font-family: "avenir-regular";
   line-height: 1.25rem;
+  font-family: "avenir-regular";
+  font-weight: 400;
+  font-size: 0.875;
 }
 .comment__avatar-box-img {
   width: 3rem;

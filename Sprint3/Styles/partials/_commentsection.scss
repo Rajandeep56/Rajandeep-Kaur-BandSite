@@ -4,7 +4,7 @@
       margin: 0 11.25rem 0 11.25rem;
   
       &__title {
-        font-family: avenir-bold;
+        font-family: 'avenir-bold';
         font-size: 2.125rem;
         font-weight: 700;
         margin: 3rem 0 3rem;
@@ -34,7 +34,7 @@
       &__textbox {
         padding: 1rem;
         border-radius: 0.25rem;
-        font-family: avenir-regular;
+        font-family: 'avenir-regular';
         border: 1px solid $Mercury;
         background-color: $Alabaster;
         border-color: $Silver;
@@ -68,7 +68,8 @@
           display: flex;
           justify-content: center;
           flex-direction: column;
-          padding: 1.5rem 12rem;
+          padding: 0rem 10rem;
+          
         }
         box-sizing: border-box;
         background-color: $Alabaster;
@@ -76,7 +77,6 @@
         border-top: 1px solid $Mercury;
 
         display: flex;
-        justify-content: center;
         &:hover {
           background-color: $Mercury;
         }
@@ -97,7 +97,9 @@
           padding-top: 1rem;
           font-family: 'avenir-regular';
           line-height: 1.25rem;
-
+          font-family: 'avenir-regular';
+          font-weight: 400;
+          font-size: 0.875;
         }
         
       }

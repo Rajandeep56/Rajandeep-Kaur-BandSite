@@ -1,71 +1,78 @@
 async function showTable() {
-  const shows = await bandSiteApi.getShows();
+  try {
+    const shows = await bandSiteApi.getShows();
 
-  let tableSection = document.querySelector(".shows");
+    const tableSection = document.querySelector(".shows");
 
-  let tableTitle = document.createElement("section");
-  tableTitle.classList.add("shows__title-box");
-  tableSection.appendChild(tableTitle);
+    const tableTitle = document.createElement("section");
+    tableTitle.classList.add("shows__title-box");
+    tableSection.appendChild(tableTitle);
 
-  let heading = document.createElement("h1");
-  heading.classList.add("shows__title");
-  tableTitle.appendChild(heading);
-  heading.innerText = "Shows";
+    const heading = document.createElement("h1");
+    heading.classList.add("shows__title");
+    heading.innerText = "Shows";
+    tableTitle.appendChild(heading);
 
-  let showRow = document.createElement("div");
-  showRow.classList.add("shows__box-main");
-  tableSection.appendChild(showRow);
+    const showRow = document.createElement("div");
+    showRow.classList.add("shows__box-main");
+    tableSection.appendChild(showRow);
 
-  let columnTitle = document.createElement("div");
-  columnTitle.classList.add("shows__heading-box");
-  showRow.appendChild(columnTitle);
+    const columnTitle = document.createElement("div");
+    columnTitle.classList.add("shows__heading-box");
+    showRow.appendChild(columnTitle);
 
-  let dateHeading = document.createElement("h3");
-  dateHeading.classList.add("shows__heading-box--date");
-  columnTitle.appendChild(dateHeading);
-  dateHeading.innerText = "DATES";
+    columnHeading(columnTitle, "DATES");
+    columnHeading(columnTitle, "VENUE");
+    columnHeading(columnTitle, "LOCATION");
 
-  let venueHeading = document.createElement("h3");
-  venueHeading.classList.add("shows__heading-box--venue");
-  columnTitle.appendChild(venueHeading);
-  venueHeading.innerText = "VENUE";
+    for (let i = 0; i < shows.length; i++) {
+      const arrayRow = document.createElement("div");
+      arrayRow.classList.add("shows__each-row"); 
+      showRow.appendChild(arrayRow);
+     
+      createColumn(arrayRow, formatDateString(shows[i].date), "shows__each-row--date");
+      createColumn(arrayRow, shows[i].place, "shows__each-row--venue");
+      createColumn(arrayRow, shows[i].location, "shows__each-row--location");
 
-  let locationHeading = document.createElement("h3");
-  locationHeading.classList.add("shows__heading-box--location");
-  columnTitle.appendChild(locationHeading);
-  locationHeading.innerText = "LOCATION";
+      const buttonDiv = document.createElement("div");
+      buttonDiv.classList.add("shows__each-row--button-container");
+      arrayRow.appendChild(buttonDiv);
 
-  for (let i = 0; i < shows.length; i++) {
-    let arrayRow = document.createElement("div");
-    arrayRow.classList.add("shows__each-row");
-    showRow.appendChild(arrayRow);
-
-    let date = document.createElement("h4");
-    date.classList.add("shows__each-row--date");
-    arrayRow.appendChild(date);
-    const datetime = shows[i].date;
-    const dateconversion=new Date(datetime)
-    date.innerText = dateconversion.toLocaleDateString('en-US');
-
-    let venue = document.createElement("h4");
-    venue.classList.add("shows__each-row--venue");
-    arrayRow.appendChild(venue);
-    venue.innerText = shows[i].place;
-
-    let location = document.createElement("h4");
-    location.classList.add("shows__each-row--location");
-    arrayRow.appendChild(location);
-    location.innerText = shows[i].location;
-
-    let buttonDiv = document.createElement("div");
-    buttonDiv.classList.add("shows__each-row--button-container");
-    arrayRow.appendChild(buttonDiv);
-
-    let button = document.createElement("button");
-    button.classList.add("shows__each-row--button");
-    buttonDiv.appendChild(button);
-    button.innerText = "BUY TICKETS";
+      const button = document.createElement("button");
+      button.classList.add("shows__each-row--button");
+      button.innerText = "BUY TICKETS";
+      buttonDiv.appendChild(button);
+    }
+  } catch (error) {
+    console.error('Error fetching shows:', error.message);
   }
 }
+
+function columnHeading(maindiv, content) {
+  const heading = document.createElement("h3");
+  heading.classList.add(`shows__heading-box--${content.toLowerCase()}`);
+  heading.innerText = content;
+  maindiv.appendChild(heading);
+}
+
+function formatDateString(datetime) {
+  const dateConversion = new Date(datetime);
+  const date = {
+    weekday: 'short',
+    month: 'short',
+    day: '2-digit',
+    year: 'numeric'
+  };
+
+  return dateConversion.toLocaleDateString('en-US', date).replace(/,/g, '');
+}
+
+function createColumn(maindiv, content, classname) {
+  const column = document.createElement("h4");
+  column.classList.add(classname);
+  column.innerText = content;
+  maindiv.appendChild(column);
+}
+
 
 showTable();

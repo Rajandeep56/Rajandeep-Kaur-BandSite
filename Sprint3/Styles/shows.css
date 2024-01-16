@@ -362,7 +362,7 @@ body {
   margin: 0 11.25rem 0 11.25rem;
 }
 .comment__title {
-  font-family: avenir-bold;
+  font-family: "avenir-bold";
   font-size: 2.125rem;
   font-weight: 700;
   margin: 3rem 0 3rem;
@@ -392,7 +392,7 @@ body {
 .comment__textbox {
   padding: 1rem;
   border-radius: 0.25rem;
-  font-family: avenir-regular;
+  font-family: "avenir-regular";
   border: 1px solid #E1E1E1;
   background-color: #FAFAFA;
   border-color: #afafaf;
@@ -435,13 +435,12 @@ body {
   border-bottom: 1px solid #E1E1E1;
   border-top: 1px solid #E1E1E1;
   display: flex;
-  justify-content: center;
 }
 .comment__previous-comments {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 1.5rem 12rem;
+  padding: 0rem 10rem;
 }
 .comment__previous:hover {
   background-color: #E1E1E1;
@@ -460,6 +459,9 @@ body {
   padding-top: 1rem;
   font-family: "avenir-regular";
   line-height: 1.25rem;
+  font-family: "avenir-regular";
+  font-weight: 400;
+  font-size: 0.875;
 }
 .comment__avatar-box-img {
   width: 3rem;
@@ -471,7 +473,7 @@ body {
 }
 
 .shows {
-  background-color: #FAFAFA;
+  background-color: #FFFFFF;
   display: flex;
   padding: 1.5rem 0 1.5rem 0;
 }
@@ -480,7 +482,7 @@ body {
 }
 .shows__title-box {
   padding: 0 5rem;
-  font-family: "avenir-bold";
+  font-family: "avenir-demi";
   font-size: 2.25rem;
   color: #323232;
 }
@@ -504,10 +506,16 @@ body {
   align-items: center;
   padding: 0 0 0 1rem;
   font-size: 0.75rem;
-  border-bottom: 2px solid #afafaf;
+  border-bottom: 2px solid #FAFAFA;
 }
 .shows__each-row--location, .shows__each-row--venue, .shows__each-row--date {
   padding: 0 6rem 0 0rem;
+}
+.shows__each-row:hover {
+  background-color: #afafaf;
+}
+.shows__each-row.show--selected {
+  background-color: #323232;
 }
 .shows__each-row--button {
   font-family: avenir-demi;
